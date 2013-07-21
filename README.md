@@ -1,5 +1,5 @@
 
-simpleKinect
+[simpleKinect][4]
 =======
 
 simpleKinect is an interface application for sending data from the Microsoft Kinect to any OSC-enabled application. The application attempts to improve upon similar software by offering more openni features and more user control. 
@@ -35,6 +35,11 @@ How to install:
 
 2. Once Kinect drivers have been downloaded and installed, you're done. Open up simpleKinect, and get to work!
 
+
+[FAQ][5]
+----------------------------------------
+Visit [jpbellona.com][5] for simpleKinect's [FAQ page][5].
+
 License
 ----------------------------------------
 All files are covered under the GPL v3 license.
@@ -57,3 +62,5 @@ simpleKinect, Copyright (C) 2013 [Jon Bellona][1] <[http://jpbellona.com/][1]>
 [1]: http://jpbellona.com/  "Jon Bellona"
 [2]: https://code.google.com/p/simple-openni/wiki/Installation  "simple-openni"
 [3]: http://decyborg.wordpress.com/2013/01/19/kinect-on-os-x-10-8-and-processing/ "install kinect drivers"
+[4]: http://jpbellona.com/kinect/ "simpleKinect on jpbellona"
+[5]: http://deecerecords.com/kinect/simplekinect-faq "simpleKinect FAQ"
