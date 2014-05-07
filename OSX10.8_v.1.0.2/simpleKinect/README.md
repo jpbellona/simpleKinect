@@ -4,7 +4,7 @@
 
 simpleKinect is an interface application for sending data from the Microsoft Kinect to any OSC-enabled application. The application attempts to improve upon similar software by offering more openni features and more user control. 
 
-The interface was built with Processing, utilizing the libraries: [controlP5][8], [oscP5][7], and [simple-openni][9]. Because I used open-source tools, and because the nature of the project is to stimulate creativity, simpleKinect is free to use.
+The interface was built with Processing, utilizing the libraries: controlP5, oscP5, and simple-openni. Because I used open-source tools, and because the nature of the project is to stimulate creativity, simpleKinect is free to use.
 
 
 Features
@@ -27,24 +27,13 @@ In the off chance that you do not already have Kinect drivers installed, you wil
 
 How to install:
 
-1. The easiest method to install Kinect drivers is to follow the install directions on the simple-openni Processing library site. (Important! If you're running v.1.0.2 or lower, you do not need to install the actual SimpleOpenNI library nor Processing. You only need to install the Kinect drivers.)
+1. The easiest method to install Kinect drivers is to follow the install directions on the simple-openni Processing library site. (Important! You do not need to install the actual SimpleOpenNI library nor Processing. You only need to install the Kinect drivers.)
 
 	  [https://code.google.com/p/simple-openni/wiki/Installation][2]<br>
 
 	For those running OSX 10.8.x, I found these instructions extremely helpful... [http://decyborg.wordpress.com/2013/01/19/kinect-on-os-x-10-8-and-processing/][3]<br><br>
 
-2. Once Kinect drivers have been downloaded and installed, and you're using simpleKinect v.1.0.2 and below you're done. Open up simpleKinect, and get to work! Otherwise, if you're running simpleKinect from Processing, see the next step.
-
-
-Processing
---------------------------------------------
-If you're running simpleKinect from Processing (simpleKinect v.1.1. and higher), you'll need to install Processing and its libraries. In the off chance that you do not already have Processing installed, you will need to install them on your computer.
-
-
-How to install:
-
-1. Download Processing. [https://processing.org/download/][6]<br>
-2. Download and install Processing libraries [oscP5][7], [controlP5][8], and [simple-openni][9].
+2. Once Kinect drivers have been downloaded and installed, you're done. Open up simpleKinect, and get to work!
 
 
 [FAQ][5]
@@ -75,7 +64,3 @@ simpleKinect, Copyright (C) 2013 [Jon Bellona][1] <[http://jpbellona.com/][1]>
 [3]: http://decyborg.wordpress.com/2013/01/19/kinect-on-os-x-10-8-and-processing/ "install kinect drivers"
 [4]: http://jpbellona.com/kinect/ "simpleKinect on jpbellona"
 [5]: http://deecerecords.com/kinect/simplekinect-faq "simpleKinect FAQ"
-[6]: https://processing.org/download/ "Processing"
-[7]: http://www.sojamo.de/libraries/oscP5/ "oscP5"
-[8]: http://www.sojamo.de/libraries/controlP5/ "controlP5"
-[9]: https://code.google.com/p/simple-openni/downloads/list "simple-openni"

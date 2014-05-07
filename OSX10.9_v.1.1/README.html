@@ -1,0 +1,174 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>README</title></head><body><h1 id="simplekinect"><a href="http://jpbellona.com/kinect/" title="simpleKinect on jpbellona">simpleKinect</a></h1>
+<p>simpleKinect is an interface application for sending data from the Microsoft Kinect to any OSC-enabled application. The application attempts to improve upon similar software by offering more openni features and more user control. </p>
+<p>The interface was built with Processing, utilizing the libraries: <a href="http://www.sojamo.de/libraries/controlP5/" title="controlP5">controlP5</a>, <a href="http://www.sojamo.de/libraries/oscP5/" title="oscP5">oscP5</a>, and <a href="https://code.google.com/p/simple-openni/downloads/list" title="simple-openni">simple-openni</a>. Because I used open-source tools, and because the nature of the project is to stimulate creativity, simpleKinect is free to use.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Auto-calibration.</li>
+<li>Specify OSC output IP and Port in real time.</li>
+<li>Send CoM (Center of Mass) coordinate of all users inside the space, regardless of skeleton calibration.</li>
+<li>Send skeleton data (single user), on a joint-by-joint basis, as specified by the user.</li>
+<li>Manually switch between users for skeleton tracking.</li>
+<li>Individually select between three joint modes (world, screen, and body) for sending data.</li>
+<li>Individually determine the OSC output url for any joint.</li>
+<li>Save/load application settings.</li>
+<li>Send distances between joints (sent in millimeters). [default is on]</li>
+</ul>
+<h2 id="kinect-driver-installation">Kinect Driver Installation</h2>
+<p>In the off chance that you do not already have Kinect drivers installed, you will need to install them on your computer. The process, once lengthy, has been simplified into two steps. See below.</p>
+<p>How to install:</p>
+<ol>
+<li>
+<p>The easiest method to install Kinect drivers is to follow the install directions on the simple-openni Processing library site. (Important! If you're running v.1.0.2 or lower, you do not need to install the actual SimpleOpenNI library nor Processing. You only need to install the Kinect drivers.)</p>
+<p><a href="https://code.google.com/p/simple-openni/wiki/Installation" title="simple-openni">https://code.google.com/p/simple-openni/wiki/Installation</a><br></p>
+<p>For those running OSX 10.8.x, I found these instructions extremely helpful... <a href="http://decyborg.wordpress.com/2013/01/19/kinect-on-os-x-10-8-and-processing/" title="install kinect drivers">http://decyborg.wordpress.com/2013/01/19/kinect-on-os-x-10-8-and-processing/</a><br><br></p>
+</li>
+<li>
+<p>Once Kinect drivers have been downloaded and installed, and you're using simpleKinect v.1.0.2 and below you're done. Open up simpleKinect, and get to work! Otherwise, if you're running simpleKinect from Processing, see the next step.</p>
+</li>
+</ol>
+<h2 id="processing">Processing</h2>
+<p>If you're running simpleKinect from Processing (simpleKinect v.1.1. and higher), you'll need to install Processing and its libraries. In the off chance that you do not already have Processing installed, you will need to install them on your computer.</p>
+<p>How to install:</p>
+<ol>
+<li>Download Processing. <a href="https://processing.org/download/" title="Processing">https://processing.org/download/</a><br></li>
+<li>Download and install Processing libraries <a href="http://www.sojamo.de/libraries/oscP5/" title="oscP5">oscP5</a>, <a href="http://www.sojamo.de/libraries/controlP5/" title="controlP5">controlP5</a>, and <a href="https://code.google.com/p/simple-openni/downloads/list" title="simple-openni">simple-openni</a>.</li>
+</ol>
+<h2 id="faq"><a href="http://deecerecords.com/kinect/simplekinect-faq" title="simpleKinect FAQ">FAQ</a></h2>
+<p>Visit <a href="http://deecerecords.com/kinect/simplekinect-faq" title="simpleKinect FAQ">jpbellona.com</a> for simpleKinect's <a href="http://deecerecords.com/kinect/simplekinect-faq" title="simpleKinect FAQ">FAQ page</a>.</p>
+<h2 id="license">License</h2>
+<p>All files are covered under the GPL v3 license.</p>
+<p>simpleKinect, Copyright (C) 2013 <a href="http://jpbellona.com/" title="Jon Bellona">Jon Bellona</a> &lt;<a href="http://jpbellona.com/" title="Jon Bellona">http://jpbellona.com/</a>&gt;</p>
+<pre><code>Released under the GNU General Public License, Version 3.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+  http://www.gnu.org/licenses/gpl.html
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre></body></html>

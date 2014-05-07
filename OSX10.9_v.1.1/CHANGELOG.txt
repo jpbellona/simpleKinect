@@ -1,0 +1,45 @@
+CHANGELOG
+
+v. 1.1.0
+--------------------
+	2014-01-19
+	* Updated simpleKinect to work with MacOSX 10.9. Older versions of Mac should still use simpleKinect v. 1.0.2 and below. simpleKinect no longer works as a stand alone app with OSX 10.9. Processing must be installed along with dependent libraries (oscP5, controlP5, simpleopenni)
+	* Updated to Processing 2.1 (#223). 
+	* Updated to simpleopenni from v.0.27 to v.1.96. Code in simplekinect altered to work with version 1.96.
+
+v. 1.0.2
+--------------------
+	2013-07-20
+	* Changed all OSC urls containing an underscore "_" to camelCase, so that Kyma users would be able to receive these OSC messages directly from simpleKinect.
+	The old messages were (/lhand_to_rhand, /lhand_to_torso, /rhand_to_torso, /lhand_to_rfoot, /rhand_to_lfoot, /lhand_to_head, /rhand_to_head).
+	The new messages are (/lhandToRhand, /lhandToTorso, /rhandToTorso, /lhandToRfoot, /rhandToLfoot, /lhandToHead, /rhandToHead, /userId).
+
+v. 1.0.1
+--------------------
+	2013-03-28
+	* Changed name from simpleK to simpleKinect.
+
+	* Changed OSC url formatting from /userId/jointName to /jointName.
+	Helps facilitate the single skeleton compatibility of the software. Only one skeleton means that only one set of skeleton joints will ever be sent. Simpler OSC url formatting means less coding for the end user in parsing incoming OSC messages. However, any future support of multiple skeletons will necessitate the use of /userId/jointName.
+
+v. 1.0.0
+--------------------
+	2013-03-21
+
+	* Initial Release
+
+
+TODO
+--------------------
+* in Body Mode, still send the z coordinate related to the position of the camera. You utilize this real-world check as a threshold barrier.
+* perhaps offer a fourth mode (World + Body). (see above)
+* send two user skeletons.
+* extend the qwerty keyboard to switch between the first nine users of their tracking skeleton.
+* either take off mirror capability or tell the user that the 'spacebar' toggles mirror capability (which cuts off sends for a second)
+* send a message when the skeleton calibrates and when the user is lost.
+
+WISHLIST
+--------------------
+* add joint relationships inside simpleKinect (poses that cause a trigger)
+* add trigger functionality similar to Synapse application
+* allow user to specify which joint distances to send across OSC.
