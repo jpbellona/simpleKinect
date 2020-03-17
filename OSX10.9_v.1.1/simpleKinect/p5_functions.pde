@@ -101,71 +101,71 @@ void controlEvent(ControlEvent theEvent) {
             );
     if(theEvent.getName().equals("inputip")) {
        oscIP = theEvent.getStringValue();
-       ((Textfield)cp5.controller("inputip")).setFocus(false);
+       ((Textfield)cp5.getController("inputip")).setFocus(false);
     } 
     if(theEvent.getName().equals("inputport")) {
        oscPort = int(theEvent.getStringValue());
-       ((Textfield)cp5.controller("inputport")).setFocus(false);
+       ((Textfield)cp5.getController("inputport")).setFocus(false);
     } 
     if(theEvent.getName().equals("lhand-url")) {
        oscURI_left_hand = theEvent.getStringValue();
-       ((Textfield)cp5.controller("lhand-url")).setFocus(false);
+       ((Textfield)cp5.getController("lhand-url")).setFocus(false);
     } 
     if(theEvent.getName().equals("lelbow-url")) {
        oscURI_left_elbow = theEvent.getStringValue();
-       ((Textfield)cp5.controller("lelbow-url")).setFocus(false);
+       ((Textfield)cp5.getController("lelbow-url")).setFocus(false);
     } 
     if(theEvent.getName().equals("lshoulder-url")) {
        oscURI_left_shoulder = theEvent.getStringValue();
-       ((Textfield)cp5.controller("lshoulder-url")).setFocus(false);
+       ((Textfield)cp5.getController("lshoulder-url")).setFocus(false);
     } 
     if(theEvent.getName().equals("rhand-url")) {
        oscURI_right_hand = theEvent.getStringValue();
-       ((Textfield)cp5.controller("rhand-url")).setFocus(false);
+       ((Textfield)cp5.getController("rhand-url")).setFocus(false);
     } 
     if(theEvent.getName().equals("relbow-url")) {
        oscURI_right_elbow = theEvent.getStringValue();
-       ((Textfield)cp5.controller("relbow-url")).setFocus(false);
+       ((Textfield)cp5.getController("relbow-url")).setFocus(false);
     } 
     if(theEvent.getName().equals("rshoulder-url")) {
        oscURI_right_shoulder = theEvent.getStringValue();
-       ((Textfield)cp5.controller("rshoulder-url")).setFocus(false);
+       ((Textfield)cp5.getController("rshoulder-url")).setFocus(false);
     } 
     if(theEvent.getName().equals("lhip-url")) {
        oscURI_left_hip = theEvent.getStringValue();
-       ((Textfield)cp5.controller("lhip-url")).setFocus(false);
+       ((Textfield)cp5.getController("lhip-url")).setFocus(false);
     } 
     if(theEvent.getName().equals("lknee-url")) {
        oscURI_left_knee = theEvent.getStringValue();
-       ((Textfield)cp5.controller("lknee-url")).setFocus(false);
+       ((Textfield)cp5.getController("lknee-url")).setFocus(false);
     } 
     if(theEvent.getName().equals("lfoot-url")) {
        oscURI_left_foot = theEvent.getStringValue();
-       ((Textfield)cp5.controller("lfoot-url")).setFocus(false);
+       ((Textfield)cp5.getController("lfoot-url")).setFocus(false);
     } 
     if(theEvent.getName().equals("rhip-url")) {
        oscURI_right_hip = theEvent.getStringValue();
-       ((Textfield)cp5.controller("rhip-url")).setFocus(false);
+       ((Textfield)cp5.getController("rhip-url")).setFocus(false);
     }
     if(theEvent.getName().equals("rknee-url")) {
        oscURI_right_knee = theEvent.getStringValue();
-       ((Textfield)cp5.controller("rknee-url")).setFocus(false);
+       ((Textfield)cp5.getController("rknee-url")).setFocus(false);
     }
     if(theEvent.getName().equals("rfoot-url")) {
        oscURI_right_foot = theEvent.getStringValue();
-       ((Textfield)cp5.controller("rfoot-url")).setFocus(false);
+       ((Textfield)cp5.getController("rfoot-url")).setFocus(false);
     }
     if(theEvent.getName().equals("torso-url")) {
        oscURI_torso = theEvent.getStringValue();
-       ((Textfield)cp5.controller("torso-url")).setFocus(false);
+       ((Textfield)cp5.getController("torso-url")).setFocus(false);
     }
     if(theEvent.getName().equals("neck-url")) {
        oscURI_neck = theEvent.getStringValue();
-       ((Textfield)cp5.controller("neck-url")).setFocus(false);
+       ((Textfield)cp5.getController("neck-url")).setFocus(false);
     }
     if(theEvent.getName().equals("head-url")) {
        oscURI_head = theEvent.getStringValue();
-       ((Textfield)cp5.controller("head-url")).setFocus(false);
+       ((Textfield)cp5.getController("head-url")).setFocus(false);
     }
   }
   

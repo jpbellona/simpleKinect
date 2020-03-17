@@ -135,7 +135,7 @@ void addJointToggles() {
   joint_toggle = cp5.addToggle("alljoints_send", false)
     .setPosition(centerX+150, centerY-60);      
   customizeToggle(joint_toggle);
-  joint_toggle.captionLabel().setVisible(true);
+  joint_toggle.getCaptionLabel().setVisible(true);
   joint_toggle.setCaptionLabel("Send All Joints");
 }
 
@@ -145,7 +145,7 @@ void customizeToggle(Toggle tog) {
   .setColorActive(color(255))
   .setColorLabel(color(255))
   .setSize(20, 20);
-  tog.captionLabel().setVisible(false);
+  tog.getCaptionLabel().setVisible(false);
 }
 
 //void customizeCheckbox(CheckBox cb) {
@@ -163,7 +163,7 @@ void customizeToggle(Toggle tog) {
 void customizeTextfield(Textfield tf, String jointUrl) {
   tf.moveTo(skelOSCControls);
   tf.setText(jointUrl);
-  tf.captionLabel().setVisible(false);
+  tf.getCaptionLabel().setVisible(false);
   tf.setColorForeground(color(20));
   tf.setColorBackground(color(20));
   tf.setColorActive(color(100));
@@ -180,7 +180,7 @@ void loadSkelOSC(float v) {
 /**
  * Add body mode dropdown lists to the OSC Control box
  */
-void addBodyModeControls() {
+void addBodyModeControls() { //<>//
 
   DropdownList lfoot = cp5.addDropdownList("left_foot-mode")
     .setPosition(centerX-180,centerY+190);
@@ -233,7 +233,7 @@ void addBodyModeControls() {
   DropdownList torso = cp5.addDropdownList("torso-mode")
     .setPosition(centerX-40,centerY-50);
   customizeDropdown(torso);
-  torso.setIndex(0);
+  //torso.setIndex(0);
 
   DropdownList neck = cp5.addDropdownList("neck-mode")
     .setPosition(centerX-40,centerY-200);
@@ -251,14 +251,14 @@ void customizeDropdown(DropdownList ddl) {
   ddl.setItemHeight(18);
   ddl.setBarHeight(15);
   ddl.setWidth(80);
-  ddl.captionLabel().set("Tracking Mode");
-  ddl.captionLabel().style().marginTop = 3;
-  ddl.captionLabel().style().marginLeft = 3;
-  ddl.valueLabel().style().marginTop = 3;
+  ddl.getCaptionLabel().set("Tracking Mode");
+  ddl.getCaptionLabel().getStyle().marginTop = 3;
+  ddl.getCaptionLabel().getStyle().marginLeft = 3;
+  ddl.getValueLabel().getStyle().marginTop = 3;
   ddl.addItem("Real-World", 0);
   ddl.addItem("Screen", 1);
   ddl.addItem("Body", 2);
-  ddl.setIndex(2);
+  //ddl.setIndex(2);
   //ddl.scroll(0);
   ddl.setColorBackground(color(60));
   ddl.setColorActive(color(255, 128));
@@ -288,6 +288,12 @@ class vitruvianCanvas extends Canvas {
   public void draw(PApplet p) {
     imageMode(CENTER);
     image(vitruvian, width/2, height/2);
+    // renders a square with randomly changing colors
+  }
+  
+  public void draw(PGraphics g) {
+   // imageMode(CENTER);
+    //image(vitruvian, width/2, height/2);
     // renders a square with randomly changing colors
   }
 }

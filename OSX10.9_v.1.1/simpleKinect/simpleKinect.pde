@@ -16,17 +16,17 @@
  */
 
 //kinect library and vars
-import processing.opengl.*;
+import processing.opengl.*; //<>//
 import SimpleOpenNI.*;
 SimpleOpenNI  kinect;
-boolean  autoCalib = true;
+boolean  autoCalib = false;
 int trackUserNum = 1;  //sets which userID to track
 //major function gates
 boolean trackCoM = true;
 boolean trackSkeleton = true;
-boolean drawPointCloud = true;
-//boolean drawDepthImage = false;
-boolean sendDistances = true;
+boolean drawPointCloud = false;
+boolean drawDepthImage = false;
+boolean sendDistances = false;
 boolean realWorldMode = false;
 boolean projectiveMode = false;
 boolean bodyMode = true;
@@ -52,7 +52,7 @@ ControlGroup oscControls;
 Button oscTab;
 int oscBoxResult = -1;
 String oscIP = "127.0.0.1";
-int oscPort = 8000;
+int oscPort = 57120;
 float t;
 int centerX, centerY;
 ControlGroup skelOSCControls;
@@ -91,7 +91,7 @@ void setup() {
   noStroke();
   
   //titlebar
-  frame.setTitle("simpleKinect [v.1.1]  by Jon Bellona");
+  surface.setTitle("simpleKinect [v.1.1]  by Jon Bellona");
   
   //KINECT setup
   kinect = new SimpleOpenNI(this);
@@ -154,13 +154,10 @@ void draw() {
   //KINECT  loop
   kinect.update(); // update the cam
   background(bg,bg,bg); //reset bg
-//  if (drawDepthImage) {
-//    image(kinect.depthImage(),0,0);
-//  }
+  if (drawDepthImage) {
+    image(kinect.depthImage(),0,0);
+  }
   updateCamera(); //position camera position -- effects Processing only
   updateTracking(); //@see customTracking
   camera(); //reset camera for the GUI controls.
 }
-
-
-

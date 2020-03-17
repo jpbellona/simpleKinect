@@ -15,7 +15,7 @@ void createOSCControlBox() {
   // add a textfield-controller with named-id inputbox
   // this controller will be linked to function inputbox() below.
   Textfield kip = cp5.addTextfield("inputip",20,36,260,20);
-  kip.captionLabel().setVisible(false);
+  kip.getCaptionLabel().setVisible(false);
   kip.moveTo(oscControls);
   kip.setColorForeground(color(20));
   kip.setColorBackground(color(20));
@@ -26,7 +26,7 @@ void createOSCControlBox() {
   Textlabel lkp = cp5.addTextlabel("inputportLabel","Set OSC Port",20,65);
   lkp.moveTo(oscControls);
   Textfield kp = cp5.addTextfield("inputport",20,80,260,20);
-  kp.captionLabel().setVisible(false);
+  kp.getCaptionLabel().setVisible(false);
   kp.moveTo(oscControls);
   kp.setColorForeground(color(20));
   kp.setColorBackground(color(20));
@@ -76,8 +76,8 @@ void createOSCControlBox() {
 // the OK button of the oscControls.
 void buttonOK(int theValue) {
 //  println("a button event from button OK.");
-  oscIP = ((Textfield)cp5.controller("inputip")).getText();
-  oscPort = int(((Textfield)cp5.controller("inputport")).getText());
+  oscIP = ((Textfield)cp5.getController("inputip")).getText();
+  oscPort = int(((Textfield)cp5.getController("inputport")).getText());
   remoteLocation = new NetAddress(oscIP, oscPort);
   oscBoxResult = theValue;
   oscTab.setColorBackground(color(127, 127, 127));

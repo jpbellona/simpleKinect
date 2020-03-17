@@ -18,9 +18,9 @@
  */
 void updateTracking() {
   
-  int userCount = kinect.getNumberOfUsers();   //our test for num# of users
- 
-  if (userCount > 0) {  
+  //int userCount = kinect.getNumberOfUsers();   //our test for num# of users
+  int[] userList = kinect.getUsers();
+  if (userList.length > 0) {  
     if (trackCoM) {
       trackAllUsersCenterOfMass();
     }
@@ -33,11 +33,12 @@ void updateTracking() {
     if (trackSkeleton) {
       // send skeleton data if it's available
       // default tracking is 1, changed onEndCalibration(), sets trackUserNum var
-      if(kinect.isTrackingSkeleton(trackUserNum)) {
-        drawSkeleton(trackUserNum); //@see OpenNIuserEvents
-        
+      //if(kinect.isTrackingSkeleton(trackUserNum)) {
+        if(kinect.isTrackingSkeleton(userList[0])) {
+        //drawSkeleton(trackUserNum); //@see OpenNIuserEvents
+        drawSkeleton(userList[0]); //@see OpenNIuserEvents
         //generate all of our OSC messages dealing with user skeletons
-        sendOSC_tracking(trackUserNum); //@see OSC_output
+        sendOSC_tracking(userList[0]); //@see OSC_output
         
       } //isTrackingSkeleton
       else {
